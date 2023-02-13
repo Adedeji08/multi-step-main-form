@@ -1,0 +1,43 @@
+.currentDisplay {
+    width: 50%;
+    // height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+
+  
+    &__buttons {
+      margin-top: 2rem;
+      align-items: center;
+      justify-content: space-between;
+ 
+  
+      .next-button {
+          background-color: #022959;
+          padding: 0.5rem 1rem;
+          color: #fff;
+          border-radius: 12%;
+          letter-spacing: 1px;
+        }
+  
+      .previous-button {
+        background-color: transparent;
+        color: #9699AA;
+        border: none;
+  
+        &.hidden {
+          opacity: 0;
+        }
+      }
+  
+      .confirm-button {
+        background-color: #928CFF;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        border-radius: 12%;
+        letter-spacing: 1px;
+        border: none;
+      }
+    }
+  }

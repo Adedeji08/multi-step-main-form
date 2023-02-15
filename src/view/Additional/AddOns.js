@@ -40,7 +40,7 @@ function AddOns() {
   const selectedAddOns = useSelector(state => state.addOns?.selectedAddOns)
   const toggleAddOn = (addOn) => {
     let alreadySelected = false;
-    console.log('this', selectedAddOns)
+   
 
     selectedAddOns.forEach((name) => {
       if (addOn.name===name.name) {
@@ -52,6 +52,7 @@ function AddOns() {
     alreadySelected ? dispatch(removeAddOn(addOn)) : dispatch(addAddOn(addOn));
 
   }
+  console.log('this', frequencySelected)
   return (
     <div className='info1'>
       <div className='info'>
@@ -70,17 +71,18 @@ function AddOns() {
             return
           }
           })
-         return  <div key={addOn.name} className={`add-on ${isSelected? 'selected': ''}`}>
+         return  <div key={addOn.name}  className={`add-on box-add box-add-options ${isSelected? 'selected': ''}`}>
          <div className={`add-on__tick ${isSelected? 'selected': ''}`} onClick={
            () => { return toggleAddOn(addOn)}
          }>
-           <img src={tick} alt="nothing important" />
+            <input type='checkbox' className='add-checkbox'/>
+           {/* <img src={tick} style={{background: 'blue',height:'10px'}}  alt="nothing important" /> */}
          </div>
          <div className="add-on__info">
            <h4>{addOn.name}</h4>
-           <p>{addOn.description}</p>
+           <p className='add-para'>{addOn.description}</p>
          </div>
-         <div className="add-on__price">
+         <div className="add-span add-on__price">
          {
            frequencySelected==='monthly'? <p>{`$${addOn.monthly}/mo`}</p> : <p>{`$${addOn.yearly}/yr`}</p>
          }
@@ -90,12 +92,12 @@ function AddOns() {
        }
          
       </div>
-            <section className='footer'>
+            {/* <section className='footer'>
                     <div className='footer-split'>
                         <button className='btn1'>Go Back</button>
                         <button className='btn'>Next Step</button>
                     </div>
-            </section>
+            </section> */}
     </div>
   )
 }

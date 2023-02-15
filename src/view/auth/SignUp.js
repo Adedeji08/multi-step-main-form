@@ -65,12 +65,12 @@ function SignUp() {
                   required
                   />
                   </div>
-                      <section className='footer'>
+                      {/* <section className='footer'>
                           <div className='footer-split'>
                             <button className='btn1'></button>
                           <button type='submit' className='btn'>Next Step</button>
                         </div>
-                  </section>
+                  </section> */}
               </form>
           </div>
       </div>

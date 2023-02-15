@@ -91,12 +91,6 @@ function Plan() {
            <p className='season'>Yearly</p>
         </div>
     </div>
-            <section className='footer'>
-              <div className='footer-split'>
-                <button className='btn1'>Go Back</button>
-                <button className='btn'>Next Step</button>
-             </div>
-            </section>
   </div>
   )
 }

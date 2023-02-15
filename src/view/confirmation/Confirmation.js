@@ -11,43 +11,23 @@
     * - Modification    : 
 **/
 import React from 'react'
+import tick from "../../assets/images/icon-thank-you.svg"
 
 function Final() {
   return (
     <div className='info1'>
     <div className='info'>
-        <h2>
-        Pick add-ons
-        </h2>
-        <p className='top-para'>Add-ons help enhance your gaming experience.</p>
-        <div className='box-add'>
-              <div className='box-add-options'>
-                  <input type='checkbox' className='add-checkbox'/>
-                  <h6>Online service <br/> <p className='add-para'>Access to multiplayer games</p>  
-                  </h6>
-                  <span className='add-span'>+$1/mo</span>
-              </div>
-              <div className='box-add-options'>
-                  <input type='checkbox' className='add-checkbox'/>
-                  <h6>Larger storage<br/> <p className='add-para'>Extra 118 of cloud save</p>  
-                  </h6>
-                  <span className='add-span'>+$2/mo</span>
-              </div>
-              <div className='box-add-options'>
-                  <input type='checkbox' className='add-checkbox'/>
-                  <h6>Customizable Profile<br/> <p className='add-para'>Custom theme on your profile</p>  
-                  </h6>
-                  <span className='add-span'>+$2/mo</span>
-              </div>
-      </div>
+    <div className='confirmation'>
+      <img src={tick} alt="thank you logo" />
+      <h3>Thank you!</h3>
+      <p>Thanks for confirming your subscription! 
+        We hope you have fun using our platform. 
+        If you ever need support, please feel free to email 
+        us at support@loremgaming.com.</p>
+    </div>
        
     </div>
-          <section className='footer'>
-                  <div className='footer-split'>
-                      <button className='btn1'>Go Back</button>
-                      <button className='btn'>Next Step</button>
-                  </div>
-          </section>
+         
   </div>
     
   )

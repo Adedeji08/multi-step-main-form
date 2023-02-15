@@ -14,6 +14,7 @@ import React from 'react'
 import '../auth/SignUp'
 import { useDispatch, useSelector } from 'react-redux';
 import { nextStep,  previousStep, selectStep  } from './CurrentDisplaySlice';
+import SignUp from '../auth/SignUp';
 import './CurrentDisplay.scss'
 
 
@@ -21,15 +22,15 @@ function CurrentDisplay() {
   const auth = useSelector(state => state.auth)
   const selectedPlan = useSelector(state => state?.plan?.type?.name)
 
-  const currentDisplay = useSelector(state => state?.currentDisplay)
+  const currentDisplay = useSelector(state => state.CurrentDisplay)
 
   const dispatch = useDispatch()
 
   const nextHandler = () => {
-    const num = currentDisplay?.currentNum
+    const num = currentDisplay.currentNum
 
     if (num===0) {
-      if (auth.name.length>0 && auth.email.includes('@') && auth.phoneNum?.length>=10) {
+      if (auth.name.length>0 && auth.email.includes('@') && auth.phoneNum.length>=10) {
         dispatch(nextStep())
         return
       } else { alert('Please fill all the info correctly')
@@ -52,16 +53,15 @@ function CurrentDisplay() {
   const backHandler = () => {
     dispatch(previousStep())
   }
-  console.log('data', selectedPlan)
   return (
-    <div className='currentDisplay'>
+    <div className=''>
      {currentDisplay?.options[currentDisplay.currentNum]}
       <div className="currentDisplay__buttons"
       style={{
         display: currentDisplay?.currentNum===4 ? 'none': 'flex'
       }}
       >
-        
+     
         <div><button className={`previous-button ${currentDisplay?.currentNum===0? 'hidden': ''}`} onClick={backHandler}>Go back</button></div>
         <div><button className='next-button' onClick={nextHandler}
         style={{

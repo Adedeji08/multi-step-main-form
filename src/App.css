@@ -28,9 +28,9 @@ body{
   background-image: url("../public/assets/images/bg-sidebar-desktop.svg");
 }
 .info1{
-  width: 50%;
+  width: 160%;
   margin-left: 350px;
-  margin-top: -500px;
+  margin-top: -350px;
 }
 .header{
   padding: 2rem 2.5rem;
@@ -188,12 +188,13 @@ h6{
   color: hsl(213, 96%, 18%);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
-  padding-top: 35px;
+  padding-top: 27px;
   padding-left: 60px;
   font-size: 12px;
 }
 .add-checkbox{
      cursor: pointer;
+     margin-top: 20px;
 }
 .img-icon{
   margin: 15px;
@@ -208,7 +209,8 @@ h4{
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  line-height: 9px;
+  height: 4vh;
+  margin-top: -10px;
 }
 .plan-para{
    color: hsl(229, 24%, 87%);
@@ -378,6 +380,17 @@ font-weight: 600;
     margin-top: 22px;
     line-height: '22px';
   }
+  .confirmation {
+        text-align: center;
+        padding: 2rem 3rem 3rem 3rem;
+        margin-top: 9rem;
+        border-radius: 1rem;
+      }
+      .confirmation p{
+        font-family: 'Ubuntu', sans-serif;
+        color: hsl(231, 11%, 63%);
+        font-size: 12px;
+      }
 }
 
 @media screen and (max-width: 500px){
